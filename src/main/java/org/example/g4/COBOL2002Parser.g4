@@ -1,6 +1,6 @@
-parser grammar Cobol2002Parser;
+parser grammar COBOL2002Parser;
 
-options { tokenVocab=Cobol2002Lexer; }
+options { tokenVocab=COBOL2002Lexer; }
 
 // Start rule for COBOL programs
 startRule
@@ -659,46 +659,203 @@ typeNextGroup
 
 // Screen Section
 screenSection
-    : SCREEN SECTION DOT
-      (screenDescriptionEntry)*
-    ;
+   : SCREEN SECTION (DOT_FS | DOT) (constantEntry | screenDescriptionEntry)*
+   ;
 
 screenDescriptionEntry
-    : level (dataName | FILLER)?
-      (screenDescriptionAttribute)*
-      DOT
-    ;
+   : INTEGERLITERAL
+   (FILLER | screenName)?
+   (screenDescriptionBlankClause
+   | screenDescriptionBellClause
+   | screenDescriptionBlinkClause
+   | screenDescriptionEraseClause
+   | screenDescriptionLightClause
+   | screenDescriptionGridClause
+   | screenDescriptionReverseVideoClause
+   | screenDescriptionUnderlineClause
+   | screenDescriptionSizeClause
+   | screenDescriptionLineClause
+   | screenDescriptionColumnClause
+   | screenDescriptionForegroundColorClause
+   | screenDescriptionBackgroundColorClause
+   | screenDescriptionControlClause
+   | screenDescriptionValueClause
+   | screenDescriptionPictureClause
+   | (screenDescriptionFromClause | screenDescriptionUsingClause)
+   | screenDescriptionUsageClause
+   | screenDescriptionBlankWhenZeroClause
+   | screenDescriptionJustifiedClause
+   | screenDescriptionSignClause
+   | screenDescriptionAutoClause
+   | screenDescriptionSecureClause
+   | screenDescriptionRequiredClause
+   | screenDescriptionPromptClause
+   | screenDescriptionFullClause
+   | screenDescriptionZeroFillClause
+   | screenDescriptionUpperOrLowerClause
+   | screenDescriptionScrollClause
+   | screenDescriptionUpdateClause)*
+   DOT_FS
+   ;
 
-screenDescriptionAttribute
-    : BLANK (SCREEN | LINE)
-    | BELL
-    | BLINK
-    | ERASE (EOL | EOS)
-    | HIGHLIGHT
-    | LOWLIGHT
-    | REQUIRED
-    | REVERSE_VIDEO
-    | SECURE
-    | UNDERLINE
-    | AUTO
-    | FULL
-    | LINE? NUMBER? IS? (dataName | INTEGER)
-    | COLUMN? NUMBER? IS? (dataName | INTEGER)
-    | FOREGROUND_COLOR IS? (dataName | INTEGER)
-    | BACKGROUND_COLOR IS? (dataName | INTEGER)
-    | CONTROL IS? VALUE IS? (literal | dataName)
-    | VALUE IS? (literal | dataName)
-    | PICTURE IS? pictureString
-    | PIC IS? pictureString
-    | FROM (literal | dataName)
-    | TO dataName
-    | USING dataName
-    | JUSTIFIED? RIGHT?
-    | SIGN IS? (LEADING | TRAILING) (SEPARATE CHARACTER?)?
-    | BLANK WHEN? ZERO
-    | OCCURS INTEGER TIMES?
-    | OCCURS INTEGER TO INTEGER TIMES? DEPENDING ON? dataName
-    ;
+screenName
+   : cobolWord
+   ;
+
+screenDescriptionBlankClause
+   : BLANK (SCREEN | LINE)
+   ;
+
+screenDescriptionBellClause
+   : BELL | BEEP
+   ;
+
+screenDescriptionBlinkClause
+   : BLINK
+   ;
+
+screenDescriptionEraseClause
+   : ERASE (EOL | EOS)
+   ;
+
+screenDescriptionLightClause
+   : HIGHLIGHT | LOWLIGHT
+   ;
+
+screenDescriptionGridClause
+   : GRID | LEFTLINE | OVERLINE
+   ;
+
+screenDescriptionReverseVideoClause
+   : REVERSE_VIDEO
+   ;
+
+screenDescriptionUnderlineClause
+   : UNDERLINE
+   ;
+
+screenDescriptionSizeClause
+   : SIZE IS? (identifier | integerLiteral)
+   ;
+
+screenDescriptionLineClause
+   : LINE (NUMBER? IS? (PLUS | PLUSCHAR | MINUSCHAR))? (identifier | integerLiteral)
+   ;
+
+screenDescriptionColumnClause
+   : (COLUMN | COL) (NUMBER? IS? (PLUS | PLUSCHAR | MINUSCHAR))? (identifier | integerLiteral)
+   ;
+
+screenDescriptionForegroundColorClause
+   : (FOREGROUND_COLOR | FOREGROUND_COLOUR) IS? (identifier | integerLiteral)
+   ;
+
+screenDescriptionBackgroundColorClause
+   : (BACKGROUND_COLOR | BACKGROUND_COLOUR) IS? (identifier | integerLiteral)
+   ;
+
+screenDescriptionControlClause
+   : CONTROL IS? identifier
+   ;
+
+screenDescriptionValueClause
+   : (VALUE IS?) literal
+   ;
+
+screenDescriptionPictureClause
+   : (PICTURE | PIC) IS? pictureString
+   ;
+
+screenDescriptionFromClause
+   : FROM (identifier | literal) screenDescriptionToClause?
+   ;
+
+screenDescriptionToClause
+   : TO identifier
+   ;
+
+screenDescriptionUsingClause
+   : USING identifier
+   ;
+
+screenDescriptionUsageClause
+   : (USAGE IS?) (DISPLAY | DISPLAY_1)
+   ;
+
+screenDescriptionBlankWhenZeroClause
+   : BLANK WHEN? ZERO
+   ;
+
+screenDescriptionJustifiedClause
+   : (JUSTIFIED | JUST) RIGHT?
+   ;
+
+screenDescriptionSignClause
+   : (SIGN IS?)? (LEADING | TRAILING) (SEPARATE CHARACTER?)?
+   ;
+
+screenDescriptionAutoClause
+   : AUTO | AUTO_SKIP | AUTOTERMINATE
+   ;
+
+screenDescriptionSecureClause
+   : SECURE | NO_ECHO
+   ;
+
+screenDescriptionRequiredClause
+   : REQUIRED | EMPTY_CHECK
+   ;
+
+screenDescriptionPromptClause
+   : PROMPT CHARACTER? IS? (identifier | literal) screenDescriptionPromptOccursClause?
+   ;
+
+screenDescriptionPromptOccursClause
+   : OCCURS integerLiteral TIMES?
+   ;
+
+screenDescriptionFullClause
+   : FULL | LENGTH_CHECK
+   ;
+
+screenDescriptionUpperOrLowerClause
+   : LOWER | UPPER
+   ;
+
+screenDescriptionScrollClause
+   : SCROLL (UP | DOWN)
+   ;
+
+screenDescriptionUpdateClause
+   : (UPDATE | (NO UPDATE))
+   ;
+
+screenDescriptionZeroFillClause
+   : ZERO_FILL
+   ;
+
+// constant entry ------------------------------------------
+
+constantEntry
+   : INTEGERLITERAL constantName (CONSTANT (IS? GLOBAL)? (constantEntryAsPhrase | constantEntryFromPhrase)) (DOT_FS | DOT)
+   ;
+
+constantEntryAsPhrase
+   : AS?
+     (literal
+     | (BYTE_LENGTH OF? dataName)
+     | arithmeticExpression
+     | (LENGTH OF? dataName)
+     )
+   ;
+
+constantEntryFromPhrase
+   : FROM dataName
+   ;
+
+constantName
+   : cobolWord
+   ;
 
 // Data description
 dataDescription
@@ -709,7 +866,7 @@ dataDescription
 
 dataDescriptionEntry
     : level (dataName | FILLER)?
-      (dataDescriptionAttribute)*
+      dataDescriptionAttribute*
       DOT
     ;
 
@@ -1558,22 +1715,58 @@ rollbackStatement
     ;
 
 searchStatement
-    : SEARCH identifier (VARYING identifier)?
-      (AT? END procedureDivisionBody)?
-      WHEN searchCondition (searchWhen)*
-    | SEARCH ALL identifier
-      (AT? END procedureDivisionBody)?
-      WHEN searchAllCondition procedureDivisionBody
+    : searchSerialStatement
+    | searchAllStatement
     ;
+
+searchSerialStatement
+    : SEARCH identifier
+      ( VARYING identifier )?
+      searchWhenClause+
+      ( atEndClause )?
+    ;
+
+searchAllStatement
+    : SEARCH ALL identifier
+      WHEN searchCondition procedureDivisionBody
+      ( atEndClause )?
+    ;
+
+searchWhenClause
+    : WHEN searchCondition procedureDivisionBody
+    ;
+
+atEndClause
+    : AT END procedureDivisionBody
+    ;
+
+searchCondition
+    : conditionExpression
+    ;
+
+conditionExpression
+    : expression relationalOperator expression
+    ;
+
+//expression
+//    : IDENTIFIER
+//    | NUMBER
+//    | STRING
+//    ;
+
+//relationalOperator
+//    : '='
+//    | 'NOT' '='
+//    | '>'
+//    | '<'
+//    | '>='
+//    | '<='
+//    ;
+
 
 searchWhen
     : (IS? EQUAL TO? | IS?)?
       procedureDivisionBody
-    ;
-
-searchCondition
-    : condition
-    | (identifier | literal) (IS? EQUAL TO? | IS?)? (identifier | literal) (AND conditionName)*
     ;
 
 searchAllCondition
