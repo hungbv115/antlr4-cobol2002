@@ -882,10 +882,6 @@ methodDeclaration
     : METHOD_ID methodName DOT procedureDivision END_METHOD DOT
     ;
 
-methodName
-    : IDENTIFIER
-    ;
-
 
 // Statement
 statement
