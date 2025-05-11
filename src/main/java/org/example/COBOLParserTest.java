@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 class COBOLPreprocessor {
     private static final Pattern COPY_PATTERN = Pattern.compile("(?i)\\s*COPY\\s+([\\w-]+)(?:\\s+OF\\s+([\\w-]+))?\\.");
     private static final Pattern REPLACE_PATTERN = Pattern.compile("(?i)\\s*REPLACE\\s+([\\w-]+)\\s+BY\\s+([\\w-]+)\\.");
-    private static final Pattern PROCESS_PATTERN = Pattern.compile("(?i)\\s*PROCESS\\s+DEFINE\\(([^)]+)\\)");
+    private static final Pattern PROCESS_PATTERN = Pattern.compile("(?i)\\s*PROCESS\\s+([A-Z0-9]+)\\(?(.*?)\\)?");
     private static final Pattern IF_PATTERN = Pattern.compile("(?i)\\s*>>IF\\s+(.+)\\s*");
     private static final Pattern ELSE_PATTERN = Pattern.compile("(?i)\\s*>>ELSE\\s*");
     private static final Pattern ENDIF_PATTERN = Pattern.compile("(?i)\\s*>>END-IF\\s*");
@@ -163,7 +163,7 @@ class COBOLPreprocessor {
 
 public class COBOLParserTest {
     public static void main(String[] args) throws IOException {
-        String inputFile = "D:\\Spring-boot\\antlr4-cobol2002\\src\\main\\resources\\local\\testantlr140.cbl";
+        String inputFile = "D:\\Spring-boot\\antlr4-cobol2002\\src\\main\\resources\\local\\test9001.cbl";
 
         try {
             // Create preprocessor and process the input file
