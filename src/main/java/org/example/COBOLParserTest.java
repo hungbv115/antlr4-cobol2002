@@ -16,14 +16,22 @@ import java.util.regex.Pattern;
 class COBOLPreprocessor {
     private static final Pattern COPY_PATTERN = Pattern.compile("(?i)\\s*COPY\\s+([\\w-]+)(?:\\s+OF\\s+([\\w-]+))?\\.");
     private static final Pattern REPLACE_PATTERN = Pattern.compile("(?i)\\s*REPLACE\\s+([\\w-]+)\\s+BY\\s+([\\w-]+)\\.");
+    private static final Pattern PROCESS_PATTERN = Pattern.compile("(?i)\\s*PROCESS\\s+DEFINE\\(([^)]+)\\)");
+    private static final Pattern IF_PATTERN = Pattern.compile("(?i)\\s*>>IF\\s+(.+)\\s*");
+    private static final Pattern ELSE_PATTERN = Pattern.compile("(?i)\\s*>>ELSE\\s*");
+    private static final Pattern ENDIF_PATTERN = Pattern.compile("(?i)\\s*>>END-IF\\s*");
+
     private Map<String, String> copyBooks = new HashMap<>();
     private Map<String, String> replacements = new HashMap<>();
+    private Map<String, String> defines = new HashMap<>();
+    private Stack<Boolean> ifStack = new Stack<>();
 
     public String preprocess(String filePath) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get(filePath));
         StringBuilder processed = new StringBuilder();
         StringBuilder currentLine = new StringBuilder();
         boolean inContinuation = false;
+        boolean skipLine = false;
 
         for (String line : lines) {
             // Skip empty lines
@@ -32,9 +40,51 @@ class COBOLPreprocessor {
             }
 
             // Handle fixed format COBOL
-//            String content = line.length() > 7 ? line.substring(7) : line;
-            String content = line;
-            
+            String content = line.length() > 7 ? line.substring(7) : line;
+
+            // Process PROCESS DEFINE statements
+            Matcher processMatcher = PROCESS_PATTERN.matcher(content);
+            if (processMatcher.find()) {
+                String[] defines = processMatcher.group(1).split(",");
+                for (String define : defines) {
+                    String[] parts = define.split("=");
+                    if (parts.length == 2) {
+                        this.defines.put(parts[0].trim(), parts[1].trim());
+                    }
+                }
+                continue;
+            }
+
+            // Handle preprocessing directives
+            Matcher ifMatcher = IF_PATTERN.matcher(content);
+            Matcher elseMatcher = ELSE_PATTERN.matcher(content);
+            Matcher endifMatcher = ENDIF_PATTERN.matcher(content);
+
+            if (ifMatcher.find()) {
+                String condition = ifMatcher.group(1);
+                boolean result = evaluateCondition(condition);
+                ifStack.push(result);
+                skipLine = !result;
+                continue;
+            } else if (elseMatcher.find()) {
+                if (!ifStack.isEmpty()) {
+                    boolean lastIf = ifStack.pop();
+                    ifStack.push(!lastIf);
+                    skipLine = !ifStack.peek();
+                }
+                continue;
+            } else if (endifMatcher.find()) {
+                if (!ifStack.isEmpty()) {
+                    ifStack.pop();
+                    skipLine = false;
+                }
+                continue;
+            }
+
+            if (skipLine) {
+                continue;
+            }
+
             // Check for continuation line
             if (line.length() > 7 && line.charAt(6) == '-') {
                 if (!inContinuation) {
@@ -85,14 +135,34 @@ class COBOLPreprocessor {
         return result;
     }
 
+    private boolean evaluateCondition(String condition) {
+        // Simple condition evaluation for now
+        // Can be enhanced to handle more complex conditions
+        String[] parts = condition.split("=");
+        if (parts.length == 2) {
+            String variable = parts[0].trim();
+            String value = parts[1].trim();
+            return defines.containsKey(variable) && defines.get(variable).equals(value);
+        }
+        return false;
+    }
+
     public void addCopyBook(String name, String content) {
         copyBooks.put(name, content);
+    }
+
+    public Map<String, String> getDefines() {
+        return Collections.unmodifiableMap(defines);
+    }
+
+    public void clearDefines() {
+        defines.clear();
     }
 }
 
 public class COBOLParserTest {
     public static void main(String[] args) throws IOException {
-        String inputFile = "D:\\Spring-boot\\antlr4-cobol2002\\src\\main\\resources\\local\\testantlr022.cbl";
+        String inputFile = "D:\\Spring-boot\\antlr4-cobol2002\\src\\main\\resources\\local\\testantlr140.cbl";
 
         try {
             // Create preprocessor and process the input file
