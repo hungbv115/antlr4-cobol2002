@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ebf27bb-e65e-4d3c-9f2b-c8f40a6b3dad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Lexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Lexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Parser.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Parser.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002ParserBaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002ParserBaseVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002ParserListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002ParserVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/CobolPreprocessorLexer.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/CobolPreprocessorParser.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/SQL9016A" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/SQL9047A" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/TA023" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9001.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9002.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9002.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9003.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9003.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9004.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9005.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9006.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9007.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9008.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9009.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9009.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9010.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9011.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9012.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9013.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9014.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9015.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9016.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9017.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9018.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9019.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9020.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9021.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9022.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9023.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9024.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9025.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9026.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9027.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9028.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9029.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9030.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9031.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9032.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9033.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9034.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9035.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9036.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9037.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9038.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9039.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9040.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9041.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9041.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9042.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9043.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9044.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9045.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9046.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9047.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9048.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/test9051.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr001.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr002.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr003.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr004.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr005.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr005.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr005.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr006.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr007.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr008.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr009.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr010.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr011.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr012.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr013.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr014.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr015.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr016.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr017.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr018.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr019.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr020.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr021.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr022.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr023.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr024.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr025.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr026.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr027.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr028.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr029.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr030.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr031.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr032.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr033.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr034.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr034.def" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr035.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr036.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr037.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr038.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr039.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr040.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr041.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr042.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr043.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr044.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr045.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr046.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr047.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr048.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr049.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr050.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr051.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr051.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr052.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr053.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr054.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr055.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr056.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr057.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058a.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058b.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058c.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058d.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058e.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr058f.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr059.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr060.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr061.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr061a.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr062.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr062a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr063.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr064.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr065.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr066.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr067.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr101.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr102.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr103.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr104.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr105.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr106.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr107.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr108.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr109.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr110.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr111.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr112.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr113.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr114.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr115.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr116.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr117.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr118.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr119.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr120.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr121.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr122.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr123.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr124.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr125.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr126.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr127.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr128.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr129.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr130.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr131.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr132.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr133.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr134.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr135.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr136.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr137.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr138.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr139.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr140.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr141.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr142.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr143.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr144.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr145.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr146.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr147.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr148.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr149.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr150.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr151.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr151.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr152.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr153.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr154.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr155.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr156.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr157.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158a.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158b.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158c.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158d.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158e.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr158f.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr159.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr160.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr161.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr161a.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr162.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr162a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr163.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr164.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr165.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr166.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr167.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr201.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr202.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr203.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr204.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr205.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr206.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr207.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr208.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr209.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr210.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr211.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr212.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr213.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr214.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr215.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr216.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr217.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr218.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr219.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr220.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr221.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr222.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr223.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr224.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr225.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr226.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr227.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr228.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr229.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr230.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr231.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr232.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr233.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr234.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr235.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr236.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr237.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr238.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr239.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr240.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr241.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr242.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr243.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr244.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr245.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr246.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr247.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr248.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr249.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr250.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr251.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr251.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr252.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr253.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr254.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr255.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr256.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr257.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258a.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258b.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258c.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258d.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258e.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr258f.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr259.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr260.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr261.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr261a.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr262.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr262a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr263.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr264.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr265.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr266.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr267.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr301.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr302.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr303.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr304.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr305.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr306.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr307.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr308.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr309.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr310.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr311.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr312.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr313.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr314.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr315.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr316.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr317.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr318.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr319.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr320.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr321.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr322.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr323.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr324.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr325.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr326.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr327.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr328.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr329.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr330.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr331.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr332.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr333.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr334.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr335.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr336.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr337.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr338.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr339.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr340.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr341.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr342.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr343.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr344.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr345.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr346.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr347.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr348.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr349.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr350.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr351.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr351.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr352.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr353.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr354.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr355.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr356.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr357.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358a.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358b.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358c.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358d.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358e.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr358f.cpy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr359.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr360.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr361.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr361a.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr362.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr362a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr363.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr364.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr365.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr366.cbl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local/testantlr367.cbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Lexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Lexer.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Parser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/g4/COBOL2002Parser.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/g4/Cobol2002.g4_temp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hungbv115&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hungbv115/antlr4-cobol2002.git&quot;,
+    &quot;accountId&quot;: &quot;437cb5ba-231c-49a4-a58b-750dd78a545e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2wtC3ITXg1EjHZVI78Vv055gAi9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.COBOLGrammarTester.executor": "Run",
+    "Application.COBOLParserTest.executor": "Run",
+    "Application.COBOLParserTest2.executor": "Run",
+    "Maven.antlr4-cobol2002 [clean].executor": "Run",
+    "Maven.antlr4-cobol2002 [compile].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Spring-boot/antlr4-cobol2002/src/main/java/org/example/g4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Spring-boot\antlr4-cobol2002\src\main\java\org\example\g4" />
+      <recent name="D:\Spring-boot\antlr4-cobol2002\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Spring-boot\antlr4-cobol2002\src\main\java\org\example\g4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.COBOLParserTest">
+    <configuration name="COBOLGrammarTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.COBOLGrammarTester" />
+      <module name="antlr4-cobol2002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="COBOLParserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.COBOLParserTest" />
+      <module name="antlr4-cobol2002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="COBOLParserTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.COBOLParserTest2" />
+      <module name="antlr4-cobol2002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.COBOLParserTest" />
+        <item itemvalue="Application.COBOLGrammarTester" />
+        <item itemvalue="Application.COBOLParserTest2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ebf27bb-e65e-4d3c-9f2b-c8f40a6b3dad" name="Changes" comment="" />
+      <created>1746851282513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746851282513</updated>
+      <workItem from="1746851283640" duration="1530000" />
+      <workItem from="1746852932111" duration="51000" />
+      <workItem from="1746853060359" duration="7007000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

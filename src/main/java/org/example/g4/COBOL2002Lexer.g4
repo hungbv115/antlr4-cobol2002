@@ -1,9 +1,36 @@
 lexer grammar COBOL2002Lexer;
 
-// Import statement for any shared grammar files (if needed)
-// import SharedLexerRules;
+@lexer::members {
+	/*
+	This Boolean is set to true to make the ANTLR testrig work.  The
+	file being parsed is rewritten without columns 73 - 80 if it is
+	being processed via an application.  Under those circumstances,
+	the lexing code must set this variable to false.
+	*/
+	public static Boolean testRig = true;
 
-// Channels and modes
+	/*
+	The token PICTURE has a different meaning in the CURRENCY SIGN
+	clause of the Special-Names paragraph than it does in the
+	Data Division.
+	*/
+	public Boolean specialNames = false;
+
+	/*
+	This Boolean is set to true if the source being processed is free
+	form, i.e. line numbers are absent, Area A and Area B are not
+	applicable.
+	*/
+	public static Boolean freeForm = false;
+
+	/*
+	This Boolean is set to true if the source being processed is part
+	of the NIST COBOL 85 test suite, which includes non-standard flags
+	in column 7 as indicators to the suite itself.
+	*/
+	public static Boolean nistTest = false;
+}
+
 channels { COMPILER_DIRECTIVES }
 
 // lexer rules --------------------------------------------------------------------------------
@@ -1338,3 +1365,18 @@ DFHRESP_RPARENCHAR : RPARENCHAR ->type(RPARENCHAR),popMode;
 
 DFHRESP_IDENTIFIER : IDENTIFIER ->type(IDENTIFIER);
 
+// Preprocessing Directives
+PROCESS_DIRECTIVE : 'PROCESS';
+DEFINE_DIRECTIVE : 'DEFINE';
+EVALUATE_DIRECTIVE : '>>EVALUATE';
+WHEN_DIRECTIVE : '>>WHEN';
+END_EVALUATE_DIRECTIVE : '>>END-EVALUATE';
+OTHER_DIRECTIVE : 'OTHER';
+IF_DIRECTIVE : '>>IF';
+ELSE_DIRECTIVE : '>>ELSE';
+END_IF_DIRECTIVE : '>>END-IF';
+
+// Preprocessing Operators
+LPAREN : '(';
+RPAREN : ')';
+EQUALS : '=';
