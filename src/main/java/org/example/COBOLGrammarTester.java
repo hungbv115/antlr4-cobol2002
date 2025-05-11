@@ -1,16 +1,20 @@
 package org.example;
 
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.tree.*;
 import org.example.g4.COBOL2002Lexer;
 import org.example.g4.COBOL2002Parser;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class    COBOLGrammarTester {
+public class COBOLGrammarTester {
+    private static final String LOG_DIR = "logs";
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+    private static Path logFile;
+
     private static class GrammarErrorListener extends BaseErrorListener {
         private final List<String> errors = new ArrayList<>();
         private final String fileName;
@@ -41,9 +45,24 @@ public class    COBOLGrammarTester {
     public static void main(String[] args) {
         String testDir = "src/main/resources/local";
         try {
+            // Create logs directory if it doesn't exist
+            Files.createDirectories(Paths.get(LOG_DIR));
+            
+            // Create log file with timestamp
+            String timestamp = LocalDateTime.now().format(DATE_FORMAT);
+            logFile = Paths.get(LOG_DIR, "grammar_test_" + timestamp + ".log");
+            
+            // Write header to log file
+            writeToLog("=== COBOL Grammar Test Log ===");
+            writeToLog("Test started at: " + LocalDateTime.now());
+            writeToLog("Test directory: " + testDir);
+            writeToLog("================================\n");
+
             testAllFiles(testDir);
         } catch (IOException e) {
-            System.err.println("Error testing files: " + e.getMessage());
+            String errorMsg = "Error testing files: " + e.getMessage();
+            System.err.println(errorMsg);
+            writeToLog("ERROR: " + errorMsg);
         }
     }
 
@@ -57,8 +76,9 @@ public class    COBOLGrammarTester {
         int totalFiles = cobolFiles.size();
         int successfulFiles = 0;
 
-        System.out.println("Starting grammar testing...");
-        System.out.println("Total COBOL files to test: " + totalFiles);
+        String startMsg = "Starting grammar testing...\nTotal COBOL files to test: " + totalFiles;
+        System.out.println(startMsg);
+        writeToLog(startMsg);
 
         // Create preprocessor
         COBOLPreprocessor preprocessor = new COBOLPreprocessor();
@@ -68,35 +88,54 @@ public class    COBOLGrammarTester {
 
         for (Path file : cobolFiles) {
             String fileName = file.getFileName().toString();
-            System.out.println("\nTesting file: " + fileName);
+            String fileMsg = "\nTesting file: " + fileName;
+            System.out.println(fileMsg);
+            writeToLog(fileMsg);
 
             try {
                 List<String> errors = testFile(file, preprocessor);
                 if (!errors.isEmpty()) {
                     failedFiles.put(fileName, errors);
+                    writeToLog("  Status: FAILED");
+                    for (String error : errors) {
+                        writeToLog("  Error: " + error);
+                    }
                 } else {
                     successfulFiles++;
+                    writeToLog("  Status: SUCCESS");
                 }
             } catch (Exception e) {
-                failedFiles.put(fileName, Collections.singletonList("Exception: " + e.getMessage()));
+                String errorMsg = "Exception: " + e.getMessage();
+                failedFiles.put(fileName, Collections.singletonList(errorMsg));
+                writeToLog("  Status: FAILED");
+                writeToLog("  " + errorMsg);
             }
         }
 
-        // Print summary
-        System.out.println("\n=== Test Summary ===");
-        System.out.println("Total files tested: " + totalFiles);
-        System.out.println("Successful: " + successfulFiles);
-        System.out.println("Failed: " + failedFiles.size());
+        // Print and log summary
+        String summary = generateSummary(totalFiles, successfulFiles, failedFiles);
+        System.out.println(summary);
+        writeToLog("\n" + summary);
+    }
+
+    private static String generateSummary(int totalFiles, int successfulFiles, Map<String, List<String>> failedFiles) {
+        StringBuilder summary = new StringBuilder();
+        summary.append("\n=== Test Summary ===\n");
+        summary.append("Total files tested: ").append(totalFiles).append("\n");
+        summary.append("Successful: ").append(successfulFiles).append("\n");
+        summary.append("Failed: ").append(failedFiles.size()).append("\n");
 
         if (!failedFiles.isEmpty()) {
-            System.out.println("\n=== Failed Files ===");
+            summary.append("\n=== Failed Files ===\n");
             for (Map.Entry<String, List<String>> entry : failedFiles.entrySet()) {
-                System.out.println("\nFile: " + entry.getKey());
+                summary.append("\nFile: ").append(entry.getKey()).append("\n");
                 for (String error : entry.getValue()) {
-                    System.out.println("  " + error);
+                    summary.append("  ").append(error).append("\n");
                 }
             }
         }
+
+        return summary.toString();
     }
 
     private static void loadCopybooks(COBOLPreprocessor preprocessor, Path dirPath) throws IOException {
@@ -107,8 +146,11 @@ public class    COBOLGrammarTester {
                         String content = Files.readString(path);
                         String name = path.getFileName().toString().replace(".cpy", "");
                         preprocessor.addCopyBook(name, content);
+                        writeToLog("Loaded copybook: " + name);
                     } catch (IOException e) {
-                        System.err.println("Error loading copybook " + path + ": " + e.getMessage());
+                        String errorMsg = "Error loading copybook " + path + ": " + e.getMessage();
+                        System.err.println(errorMsg);
+                        writeToLog("ERROR: " + errorMsg);
                     }
                 });
     }
@@ -140,4 +182,13 @@ public class    COBOLGrammarTester {
 
         return errorListener.getErrors();
     }
-} 
+
+    private static void writeToLog(String message) {
+        try {
+            Files.write(logFile, (message + "\n").getBytes(), 
+                StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.err.println("Error writing to log file: " + e.getMessage());
+        }
+    }
+}

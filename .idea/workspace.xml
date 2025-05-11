@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ebf27bb-e65e-4d3c-9f2b-c8f40a6b3dad" name="Changes" comment="62">
+    <list default="true" id="9ebf27bb-e65e-4d3c-9f2b-c8f40a6b3dad" name="Changes" comment="and more case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/COBOLGrammarTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/COBOLGrammarTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/COBOLParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/COBOLParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,28 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.COBOLGrammarTester.executor&quot;: &quot;Run&quot;,
-    &quot;Application.COBOLParserTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.COBOLParserTest2.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.antlr4-cobol2002 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.antlr4-cobol2002 [compile].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Spring-boot/antlr4-cobol2002/src/main/java/org/example/g4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.COBOLGrammarTester.executor": "Run",
+    "Application.COBOLParserTest.executor": "Debug",
+    "Application.COBOLParserTest2.executor": "Run",
+    "Maven.antlr4-cobol2002 [clean].executor": "Run",
+    "Maven.antlr4-cobol2002 [compile].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Spring-boot/antlr4-cobol2002/src/main/java/org/example/g4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Console",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Spring-boot\antlr4-cobol2002\src\main\java\org\example\g4" />
@@ -75,7 +75,7 @@
       <recent name="D:\Spring-boot\antlr4-cobol2002\src\main\java\org\example\g4" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.COBOLParserTest">
+  <component name="RunManager" selected="Application.COBOLGrammarTester">
     <configuration name="COBOLGrammarTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.COBOLGrammarTester" />
       <module name="antlr4-cobol2002" />
@@ -117,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.COBOLParserTest" />
         <item itemvalue="Application.COBOLGrammarTester" />
+        <item itemvalue="Application.COBOLParserTest" />
         <item itemvalue="Application.COBOLParserTest2" />
       </list>
     </recent_temporary>
@@ -142,7 +142,8 @@
       <workItem from="1746851283640" duration="1530000" />
       <workItem from="1746852932111" duration="51000" />
       <workItem from="1746853060359" duration="7007000" />
-      <workItem from="1746967635917" duration="2403000" />
+      <workItem from="1746967635917" duration="2816000" />
+      <workItem from="1746974694749" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="62">
       <option name="closed" value="true" />
@@ -152,14 +153,34 @@
       <option name="project" value="LOCAL" />
       <updated>1746967896027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="and more case">
+      <option name="closed" value="true" />
+      <created>1746974508140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746974508140</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="62" />
-    <option name="LAST_COMMIT_MESSAGE" value="62" />
+    <MESSAGE value="and more case" />
+    <option name="LAST_COMMIT_MESSAGE" value="and more case" />
   </component>
 </project>

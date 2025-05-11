@@ -40,9 +40,10 @@ class COBOLPreprocessor {
             }
 
             // Handle fixed format COBOL
-            String content = line.length() > 7 ? line.substring(7) : line;
+//            String content = line.length() > 7 ? line.substring(7) : line;
+            String content = line;
 
-            // Process PROCESS DEFINE statements
+                    // Process PROCESS DEFINE statements
             Matcher processMatcher = PROCESS_PATTERN.matcher(content);
             if (processMatcher.find()) {
                 String[] defines = processMatcher.group(1).split(",");
@@ -168,7 +169,7 @@ public class COBOLParserTest {
             // Create preprocessor and process the input file
             COBOLPreprocessor preprocessor = new COBOLPreprocessor();
             String input = preprocessor.preprocess(inputFile);
-            
+
             // Create a lexer and parser
             CharStream charStream = CharStreams.fromString(input);
             COBOL2002Lexer lexer = new COBOL2002Lexer(charStream);
@@ -184,7 +185,7 @@ public class COBOLParserTest {
             try {
                 // Parse the input
                 ParseTree tree = parser.startRule();
-                
+
                 // Print the parse tree
                 System.out.println("\nParse Tree:");
                 System.out.println(tree.toStringTree(parser));
